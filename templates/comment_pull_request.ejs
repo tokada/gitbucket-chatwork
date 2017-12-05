@@ -1,0 +1,2 @@
+[info][title]<%= event.sender.login %> commented pull request <%= event.repository.full_name %>#<%= event.issue.number %>[/title]<%= event.comment.html_url %><% if (event.comment.body != null) { %>
+<%- event.comment.body %><% } %>[/info]

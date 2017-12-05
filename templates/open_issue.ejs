@@ -1,0 +1,3 @@
+[info][title]<%= event.sender.login %> <%= event.action %> issue <%= event.repository.full_name %>#<%= event.issue.number %>[/title]<%= event.issue.html_url %><% if (event.issue.title != null) { %>
+<%- event.issue.title %><% } %><% if (event.issue.body != null) { %>
+<%- event.issue.body %><% } %>[/info]

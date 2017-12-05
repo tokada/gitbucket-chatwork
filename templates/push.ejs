@@ -1,0 +1,2 @@
+[info][title]<%= event.pusher.name %> pushed to <%= event.ref.replace(/^refs\/heads\//,'') %> at <%= event.repository.full_name %>[/title]<% event.commits.forEach(function(commit){ %><%= commit.committer.name %>: <%= commit.id.slice(0, 7) %> <%= commit.url %>
+<%- commit.message %><% }); %>[/info]
