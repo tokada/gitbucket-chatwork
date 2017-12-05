@@ -21,6 +21,10 @@ Prepare environment variables within AWS Lambda function:
 - CHATWORK_TOKEN
 - CHATWORK_ROOM_ID
 
+## Usage
+
+Read https://qiita.com/tokada/items/b1f6fc63c82ba4783c41 (in Japanese language)
+
 ## Licence
 
 [MIT](LICENSE)
