@@ -16,9 +16,15 @@ exports.handler = function(event, context) {
     headers: {
       'X-ChatWorkToken': process.env.CHATWORK_TOKEN
     },
-    form : { body : event.body },
+    form : { body : '[code]'+event.body+'[/code]' },
     useQuerystring: true
   };
+
+  if (!process.env.CHATWORK_TOKEN || !process.env.CHATWORK_ROOM_ID) {
+    context.done('error', { statusCode: 200, headers: {}, body: JSON.stringify({
+      error: { message: "Environment variable CHATWORK_TOKEN or CHATWORK_ROOM_ID required" } })});
+    return;
+  }
 
   request.post(options, function(err, res, body) {
     var response = {
