@@ -23,7 +23,7 @@ Prepare environment variables within AWS Lambda function:
 
 ## Usage
 
-Read https://qiita.com/tokada/items/b1f6fc63c82ba4783c41 (in Japanese language)
+See https://qiita.com/tokada/items/b1f6fc63c82ba4783c41 (in Japanese language)
 
 ## Licence
 
