@@ -49,6 +49,9 @@ exports.handler = function(event, context) {
   else if (requestBody.pull_request && requestBody.action == 'closed') {
     template = chooseTemplate('close_pull_request');
   }
+  else if (requestBody.pull_request && requestBody.action == 'synchronize') {
+    template = chooseTemplate('synchronize_pull_request');
+  }
   else if (requestBody.issue && requestBody.comment && requestBody.issue.pull_request) {
     template = chooseTemplate('comment_pull_request');
   }

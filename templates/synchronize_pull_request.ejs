@@ -1,0 +1,3 @@
+[info][title]<%= event.sender.login %> synchronized pull request <%= event.repository.full_name %>#<%= event.pull_request.number %>[/title]<%= event.pull_request.html_url %><% if (event.pull_request.title != null) { %>
+<%- event.pull_request.title %><% } %><% if (event.pull_request.body != null) { %>
+<%- event.pull_request.body %><% } %>[/info]
