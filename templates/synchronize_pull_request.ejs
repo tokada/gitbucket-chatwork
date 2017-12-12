@@ -1,3 +1,4 @@
-[info][title]<%= event.sender.login %> synchronized pull request <%= event.repository.full_name %>#<%= event.pull_request.number %>[/title]<%= event.pull_request.html_url %><% if (event.pull_request.title != null) { %>
+[info][title]<%= event.sender.login %> synchronized pull request <%= event.repository.full_name %>#<%= event.pull_request.number %>[/title]<%= event.pull_request.user.login %> wants to merge <%= event.pull_request.head.repo.owner.login %>:<%= event.pull_request.head.label %> into <%= event.pull_request.base.repo.owner.login %>:<%= event.pull_request.base.label %>
+<%= event.pull_request.html_url %><% if (event.pull_request.title != null) { %>
 <%- event.pull_request.title %><% } %><% if (event.pull_request.body != null) { %>
 <%- event.pull_request.body %><% } %>[/info]
